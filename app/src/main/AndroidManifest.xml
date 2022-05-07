@@ -51,5 +51,37 @@
             android:name=".error.ErrorActivity"
             android:exported="false" />
 
+        <service
+            android:name=".services.DicioVoiceInteractionService"
+            android:exported="true"
+            android:permission="android.permission.BIND_VOICE_INTERACTION">
+            <meta-data
+                android:name="android.voice_interaction"
+                android:resource="@xml/interaction_service">
+            </meta-data>
+            <intent-filter>
+                <action android:name="android.service.voice.VoiceInteractionService" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".services.DicioVoiceInteractionSessionService"
+            android:permission="android.permission.BIND_VOICE_INTERACTION"
+            android:process=":SessionService" />
+
+        <service
+            android:name=".services.DicioRecognitionService"
+            android:exported="true"
+            android:permission="android.permission.BIND_VOICE_INTERACTION">
+
+            <meta-data
+                android:name="android.speech"
+                android:resource="@xml/recognition_service" />
+
+            <intent-filter>
+                <action android:name="android.speech.RecognitionService" />
+            </intent-filter>
+        </service>
+
     </application>
 </manifest>

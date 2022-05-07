@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<voice-interaction-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sessionService="org.dicio.dicio_android.services.DicioVoiceInteractionSessionService"
+    android:recognitionService="org.dicio.dicio_android.services.DicioRecognitionService"
+    android:settingsActivity="org.dicio.dicio_android.MainActivity"
+    android:supportsAssist="true" />

@@ -73,7 +73,7 @@ task runCheckstyle(type: Checkstyle) {
 }
 
 afterEvaluate {
-    preDebugBuild.dependsOn runCheckstyle
+    //preDebugBuild.dependsOn runCheckstyle
 }
 
 dependencies {
