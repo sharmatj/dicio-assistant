@@ -6,18 +6,20 @@ import android.util.Log;
 
 public class DicioRecognitionService extends RecognitionService {
 
+    public static final String TAG = "DicioRecognServ";
+
     @Override
     protected void onStartListening(Intent recognizerIntent, Callback listener) {
-        Log.e("DICIO_DRS", "onStartListening");
+        Log.e(TAG, "onStartListening");
     }
 
     @Override
     protected void onCancel(Callback listener) {
-        Log.e("DICIO_DRS", "onCancel");
+        Log.e(TAG, "onCancel");
     }
 
     @Override
     protected void onStopListening(Callback listener) {
-        Log.e("DICIO_DRS", "onStopListening");
+        Log.e(TAG, "onStopListening");
     }
 }
